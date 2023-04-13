@@ -77,7 +77,7 @@ def fsm_2d(grid, f, h):
     return grid
         
     
-# Output image - not my code
+# Output image
 def get_image(grid, obstacles, path):
 	for x in obstacles:
 		grid[x] = 0	
@@ -100,7 +100,6 @@ def path_gen(u, gamma, omega, obstacles=None, act_type="relu", rnd=True):
         path.insert(0, pos)
     return path
 
-# not my code
 def neighbors(x, shape, obstacles=None):
     if obstacles is None:
         obstacles = []
@@ -124,7 +123,6 @@ def neighbors(x, shape, obstacles=None):
     ]
     return good_neighbors
 
-# not my code
 def select_dir(u, xk, obstacles=None, act_type="relu", rnd=True):
     ny, nx = u.shape
     i = xk[0]
@@ -145,7 +143,6 @@ def select_dir(u, xk, obstacles=None, act_type="relu", rnd=True):
     else:
         return None
 
-# not my code
 def local_activation(act_type="relu"):
     def relu(x):
         return np.maximum(0, x)
@@ -161,7 +158,7 @@ def main():
     obstacle_value = 1e10
     h = 1 # distance between each grid point
     
-    #FSM 2D (not my code)
+    #FSM 2D
     nx = 256
     ny = 256
     f = 1e-3*np.ones((ny, nx))
